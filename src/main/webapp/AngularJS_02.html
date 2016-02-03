@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+    <title></title>
+</head>
+<body>
+<p>Rellene los Datos de la Ficha</p>
+<div ng-app="myApp" ng-controller="myCtrl">
+
+    <h1>Ficha de Jugadores : </h1>
+    Nombre :<label>
+                <input type="text" ng-model="nombre">
+            </label><br>
+    Fecha Nacimiento :  <label>
+                            <input type="date" ng-model="fecha">
+                        </label><br>
+    Canastas :  <label>
+                    <input type="int" ng-model="canastas">
+                </label><br>
+    Asistencias :   <label>
+                        <input type="int" ng-model="asistencias">
+                    </label><br>
+    Rebotes :   <label>
+                    <input type="int" ng-model="rebotes">
+                </label><br>
+    Posicion :  <label>
+                    <input type="text" ng-model="posicion">
+                </label><br>
+
+
+    <h1>Listado de Jugadores</h1>
+    Su nombre es {{nombre}},
+    Su fecha de Nacimiento : {{fecha}},
+    El numero de canastas es : {{canastas}},
+    Ha proporcionado {{asistencias}} asistencias,
+    Ha realizado {{rebotes}} rebotes,
+    Su posicion es la de {{posicion}},
+</div>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.nombre="David";
+        $scope.fecha="09/03/1994";
+        $scope.canastas=15;
+        $scope.asistencias=12;
+        $scope.rebotes=6;
+        $scope.posicion="capitan";
+    })
+</script>
+
+</body>
+</html>

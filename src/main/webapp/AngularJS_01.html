@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+    <title></title>
+</head>
+<body>
+
+<div ng-app="">
+    <h1>Ficha de Jugadores : </h1>
+    <p>Nombre : <label>
+        <input type="text" ng-model="nombre">
+    </label>
+    </p>
+    <p>Fecha Nacimiento :   <label>
+        <input type="date" ng-model="fecha">
+    </label>
+    </p>
+    <p>Canastas :   <label>
+        <input type="int" ng-model="canastas">
+    </label>
+    </p>
+    <p>Asistencias :    <label>
+        <input type="int" ng-model="asistencias">
+    </label> </p>
+    <p>Rebotes :    <label>
+        <input type="int" ng-model="rebotes">
+    </label>
+    </p>
+    <p>Posicion :   <label>
+        <input type="text" ng-model="posicion">
+    </label>
+    </p>
+
+    <p>Su nombre es {{nombre}}</p>
+    <p>Su fecha de Nacimiento : {{fecha}}</p>
+    <p>El numero de canastas es : {{canastas}}</p>
+    <p>Ha proporcionado {{asistencias}} asistencias</p>
+    <p>Ha realizado {{rebotes}} rebotes</p>
+    <p>Su posicion es de {{posicion}}</p>
+</div>
+</body>
+</html>

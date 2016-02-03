@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="jugadoresCtrl">
+            <p>Relacion de jugadores : </p>
+            <ul>
+                <li ng-repeat="x in jugadores | orderBy:'rebotes'">
+                     {{ x.nombre + ',  ' + x.rebotes }}
+                </li>
+            </ul>
+        </div>
+    <script>
+        angular.module('myApp', []).controller('jugadoresCtrl', function($scope) {
+            $scope.jugadores = [
+                {nombre:'David',fecha:'09/03/1994',canastas:125,asistencia:10,rebotes:10,posicion: 'capitan'},
+                {nombre:'Jose',fecha:'09/03/1994',canastas:115,asistencia:6,rebotes:5,posicion: 'pivot'},
+                {nombre:'Pedro',fecha:'09/03/1994',canastas:95,asistencia:15,rebotes:15,posicion: 'alero'}
+            ];
+        });
+    </script>
+    </body>
+</html>

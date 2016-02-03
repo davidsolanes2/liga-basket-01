@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    table, td {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div ng-app="MyApp" ng-controller="JugadorCtrl">
+
+    <p>Clickar en la cabecera para ordenar la columna</p>
+
+
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th style="background-color: burlywood" ng-click="orderByMe('nombreJugador')">Jugador</th>
+                <th style="background-color: burlywood" ng-click="orderByMe('posicion')">Posicon</th>
+                <th style="background-color: burlywood" ng-click="orderByMe('numCanastas')">Canastas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in myData | orderBy:myOrderBy">
+                <td ng-if="$odd" style="background-color: #ffec34">{{x.nombreJugador}}</td>
+                <td ng-if="$even">{{x.nombreJugador}}</td>
+                <td ng-if="$odd" style="background-color: #ffec34">{{x.posicion}}</td>
+                <td ng-if="$even">{{x.posicion}}</td>
+                <td ng-if="$odd" style="background-color: #ffec34">{{x.numCanastas}}</td>
+                <td ng-if="$even">{{x.numCanastas}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    var app = angular.module("MyApp", []);
+    app.controller('JugadorCtrl', function ($scope, $http) {
+        $http.get("/jugadores").then(function (response) {
+            $scope.myData = response.data;
+        });
+            $scope.orderByMe = function(x) {
+                $scope.myOrderBy = x;
+            }
+    });
+</script>
+</body>
+</html>

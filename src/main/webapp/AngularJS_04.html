@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div ng-app="" ng-init="jugadores=[
+		{nombre:'David', fecha:'09/03/1994', canastas: '35', asistencia: '12', rebotes: '10', posicion: 'capitan'},
+		{nombre:'Jose', fecha:'09/03/1994', canastas: '35', asistencia: '12', rebotes: '10', posicion: 'pivot'},
+		{nombre:'Pedro', fecha:'09/03/1994', canastas: '35', asistencia: '12', rebotes: '10', posicion: 'alero'}]">
+        <p>Relacion de jugadores :</p>
+        <ul>
+            <li ng-repeat="x in jugadores">
+                {{ x.nombre + ',  ' + x.posicion }}
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
