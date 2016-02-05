@@ -14,16 +14,16 @@
     <div ng-app="ligaBasket01App" ng-controller="JugadorCtrl">
         <div>
             <form name="formJugadores" ng-submit="save()">
-                Nombre : <input type="text" name="nombreJugador" ng-models="jugadores.nombreJugador" required/>
-                <span ng-show="formJugadores.nombreJugador.$touched && formJugadores.nombre.$invalid">El nombre es requerido</span>
+                Nombre : <input type="text" name="nombreJugador" ng-model="jugadores.nombreJugador" required/>
+                <span ng-show="formJugadores.nombreJugador.$touched && formJugadores.nombreJugador.$invalid">El nombre es requerido</span>
 
-                Posicion : <input type="text" name="posicion" ng-models="jugadores.posicion" required/>
+                Posicion : <input type="text" name="posicion" ng-model="jugadores.posicion" required/>
                 <span ng-show="formJugadores.posicion.$touched && formJugadores.posicion.$invalid">La posicion es requerida</span><br/>
+                <br/>
+                Asistencias Totales : <input type="number" name="numAsistencias" ng-model="jugadores.numAsistencias" required/>
+                <span ng-show="formJugadores.numAsistencias.$touched && formJugadores.numAsistencias.$invalid">Requerido</span>
 
-                Asistencias Totales : <input type="number" name="numAsistencias" ng-models="jugadores.numAsistencias" required/>
-                <span ng-show="formJugadores.numAsistencias.$touched && formJugadores.numAsistencias.$invalid">Requerido</span><br/>
-
-                Canastas Totales : <input type="number" name="numCanastas" ng-models="jugadores.numCanastas" required/>
+                Canastas Totales : <input type="number" name="numCanastas" ng-model="jugadores.numCanastas" required/>
                 <span ng-show="formJugadores.numCanastas.$touched && formJugadores.numCanastas.$invalid">Requerido</span><br/>
 
                 <button type="submit" ng-disabled="formJugadores.$invalid || isSaving">
@@ -152,11 +152,11 @@
 
 <script>
         var app = angular.module('ligaBasket01App');
-        app.controller('JugadorCtrl', function($scope, jugadores) {
+        app.controller('JugadorCtrl', function($scope, Jugadores) {
             $scope.jugadores;
             $scope.save = function () {
                 $scope.isSaving = true;
-                Jugadores.save($scope, jugadores, onSaveSuccess, onSaveError);
+                Jugadores.save($scope.jugadores, onSaveSuccess, onSaveError);
             };
             var onSaveSuccess = function (result) {
                 $scope.isSaving = false;
@@ -167,7 +167,9 @@
         });
 
         app.factory("Jugadores", function($resource) {
-           return $resource('api/jugadoress/:id', {}, {});
+           return $resource('api/jugadoress/:id', {}, {
+
+           });
         });
 
     </script>
