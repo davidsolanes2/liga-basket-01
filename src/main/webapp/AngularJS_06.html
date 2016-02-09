@@ -5,7 +5,7 @@
             <title></title>
         </head>
     <body>
-        <div ng-app="myApp" ng-controller="myCtrl">
+        <div ng-app="ligaBasket01App" ng-controller="myCtrl">
             <label>
                 <input ng-model="nombre"/>
             </label>
@@ -13,7 +13,7 @@
             <h1>El Nombre del jugador es {{nombre}}</h1>
         </div>
     <script>
-        var app = angular.module('myApp',[]);
+        var app = angular.module('ligaBasket01App',[]);
         app.controller('myCtrl', function($scope){
             $scope.nombre ='David';
         });

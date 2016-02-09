@@ -5,7 +5,7 @@
         <title></title>
     </head>
     <body>
-        <div ng-app="myApp" ng-controller="jugadoresCtrl">
+        <div ng-app="ligaBasket01App" ng-controller="jugadoresCtrl">
             <p>Relacion de jugadores : </p>
             <ul>
                 <li ng-repeat="x in jugadores | orderBy:'rebotes'">
@@ -14,7 +14,7 @@
             </ul>
         </div>
     <script>
-        angular.module('myApp', []).controller('jugadoresCtrl', function($scope) {
+        angular.module('ligaBasket01App', []).controller('jugadoresCtrl', function($scope) {
             $scope.jugadores = [
                 {nombre:'David',fecha:'09/03/1994',canastas:125,asistencia:10,rebotes:10,posicion: 'capitan'},
                 {nombre:'Jose',fecha:'09/03/1994',canastas:115,asistencia:6,rebotes:5,posicion: 'pivot'},

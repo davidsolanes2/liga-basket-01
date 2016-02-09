@@ -6,7 +6,7 @@
 </head>
 <body>
 <p>Rellene los Datos de la Ficha</p>
-<div ng-app="myApp" ng-controller="myCtrl">
+<div ng-app="ligaBasket01App" ng-controller="myCtrl">
 
     <h1>Ficha de Jugadores : </h1>
     Nombre :<label>
@@ -38,7 +38,7 @@
     Su posicion es la de {{posicion}},
 </div>
 <script>
-    var app = angular.module('myApp', []);
+    var app = angular.module('ligaBasket01App', []);
     app.controller('myCtrl', function($scope) {
         $scope.nombre="David";
         $scope.fecha="09/03/1994";
