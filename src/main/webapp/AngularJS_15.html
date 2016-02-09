@@ -12,26 +12,32 @@
         }
     </style>
     <div ng-app="ligaBasket01App" ng-controller="JugadorCtrl">
-        <div>
-            <form name="formJugadores" ng-submit="save()">
-                Nombre : <input type="text" name="nombreJugador" ng-model="jugadores.nombreJugador" required/>
-                <span ng-show="formJugadores.nombreJugador.$touched && formJugadores.nombreJugador.$invalid">El nombre es requerido</span>
+        <table border="2" width="50%">
+            <thead>
+                <h1>FICHA DE JUGADORES</h1>
+            </thead>
+            <tbody>
+                <div>
+                    <form name="formJugadores" ng-submit="save()">
+                    Nombre : <input type="text" name="nombreJugador" ng-model="jugadores.nombreJugador" required/>
+                    <span ng-show="formJugadores.nombreJugador.$touched && formJugadores.nombreJugador.$invalid">El nombre es requerido</span>
 
-                Posicion : <input type="text" name="posicion" ng-model="jugadores.posicion" required/>
-                <span ng-show="formJugadores.posicion.$touched && formJugadores.posicion.$invalid">La posicion es requerida</span><br/>
-                <br/>
-                Asistencias Totales : <input type="number" name="numAsistencias" ng-model="jugadores.numAsistencias" required/>
-                <span ng-show="formJugadores.numAsistencias.$touched && formJugadores.numAsistencias.$invalid">Requerido</span>
+                    Posicion : <input type="text" name="posicion" ng-model="jugadores.posicion" required/>
+                    <span ng-show="formJugadores.posicion.$touched && formJugadores.posicion.$invalid">La posicion es requerida</span><br/>
+                    <br/>
+                    Asistencias Totales : <input type="number" name="numAsistencias" ng-model="jugadores.numAsistencias" required/>
+                    <span ng-show="formJugadores.numAsistencias.$touched && formJugadores.numAsistencias.$invalid">Requerido</span>
 
-                Canastas Totales : <input type="number" name="numCanastas" ng-model="jugadores.numCanastas" required/>
-                <span ng-show="formJugadores.numCanastas.$touched && formJugadores.numCanastas.$invalid">Requerido</span><br/>
+                    Canastas Totales : <input type="number" name="numCanastas" ng-model="jugadores.numCanastas" required/>
+                    <span ng-show="formJugadores.numCanastas.$touched && formJugadores.numCanastas.$invalid">Requerido</span><br/>
 
-                <button type="submit" ng-disabled="formJugadores.$invalid || isSaving">
-                    <span>Guardando</span>
-                </button>
-            </form>
-
-        </div>
+                    <button type="submit" ng-disabled="formJugadores.$invalid || isSaving">
+                        <span>Guardando</span>
+                    </button>
+                    </form>
+                </div>
+            </tbody>
+        </table>
     </div>
 
     <!-- build:js scripts/vendor.js -->
