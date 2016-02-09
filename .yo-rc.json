@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "liga_basket_01",
+    "packageName": "com.liga_basket_01",
+    "packageFolder": "com/liga_basket_01",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "0fc6b3a7bb50470e92f9976418225d55a57b84c4",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}

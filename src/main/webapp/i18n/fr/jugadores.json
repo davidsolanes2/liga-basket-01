@@ -1,0 +1,27 @@
+{
+    "ligaBasket01App": {
+        "jugadores" : {
+            "home": {
+                "title": "Jugadoress",
+                "createLabel": "Créer un nouveau Jugadores",
+                "createOrEditLabel": "Créer ou éditer un Jugadores"
+            },
+            "created": "Un nouveau Jugadores a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Jugadores avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Jugadores avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Jugadores {{ id }} ?"
+            },
+            "detail": {
+                "title": "Jugadores"
+            },
+            "nombreJugador": "NombreJugador",
+            "fechaNacimiento": "FechaNacimiento",
+            "numCanastas": "NumCanastas",
+            "numAsistencias": "NumAsistencias",
+            "numRebotes": "NumRebotes",
+            "posicion": "Posicion"
+        }
+    }
+}
+

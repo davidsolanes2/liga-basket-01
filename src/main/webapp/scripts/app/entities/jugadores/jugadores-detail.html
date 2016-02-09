@@ -1,0 +1,70 @@
+
+<div>
+    <h2><span translate="ligaBasket01App.jugadores.detail.title">Jugadores</span> {{jugadores.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="ligaBasket01App.jugadores.nombreJugador">NombreJugador</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{jugadores.nombreJugador}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligaBasket01App.jugadores.fechaNacimiento">FechaNacimiento</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{jugadores.fechaNacimiento | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligaBasket01App.jugadores.numCanastas">NumCanastas</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{jugadores.numCanastas}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligaBasket01App.jugadores.numAsistencias">NumAsistencias</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{jugadores.numAsistencias}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligaBasket01App.jugadores.numRebotes">NumRebotes</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{jugadores.numRebotes}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="ligaBasket01App.jugadores.posicion">Posicion</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{jugadores.posicion}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
